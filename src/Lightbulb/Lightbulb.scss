@@ -1,0 +1,21 @@
+
+.Lightbulb {
+        --bulb: 50px;
+        background-color: $DefaultBulb;
+        border-radius: var(--bulb);
+        height: var(--bulb);
+        width: var(--bulb);
+    }
+
+    .green {
+        background-color: #549C30;
+    }
+
+    .red {
+        background-color:  #B81B0E;
+    }
+
+    .amber {
+        background-color: #ffbf00;
+    }
+

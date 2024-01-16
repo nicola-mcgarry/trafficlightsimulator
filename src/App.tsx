@@ -1,24 +1,46 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import TrafficLightOG from './TrafficLightOG/TrafficLightOG';
+import TrafficLightMain from './TrafficLightsMain/TrafficLightMain';
+import Lightbulb from './Lightbulb/Lightbulb';
+import TrafficLight from './TrafficLight/TrafficLight';
+import TrafficLightOnClick from './TrafficLightsOnClick/TrafficLightsOnClick';
+import Light from './Light/Light';
+import { Lights } from './Light/Lights';
+
+interface TrafficStates {
+  [key: string]: {
+    duration: number;
+    backgroundColor: string;
+    next: string;
+  };
+}
+
+const trafficStates: TrafficStates = {
+  red: {
+    duration: 4000,
+    backgroundColor: "red",
+    next: "green"
+  },
+  yellow: {
+    duration: 500,
+    backgroundColor: "yellow",
+    next: "red"
+  },
+  green: {
+    duration: 3000,
+    backgroundColor: "green",
+    next: "yellow"
+  },
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='trafficLightsPage'>
+      <TrafficLightOG trafficStates={trafficStates}/>
+      <TrafficLightOnClick trafficStates={trafficStates}/>
+      <TrafficLight />
+      <Light Lights={Light}/>
     </div>
   );
 }

@@ -1,0 +1,38 @@
+.OnClickLights {
+    margin-left: 5%;
+    
+    .trafficLightsOnClick {
+        background-color: #000;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        width: 54px;
+        margin-left: 20%;
+    
+        .light {
+            --size: 50px;
+            background-color: #555;
+            border-radius: var(--size);
+            height: var(--size);
+            width: var(--size);
+           
+        }
+    }
+    
+    button {
+        height: 12%;
+        border: none;
+        background-color: #D44D5C;
+        border-radius: 7px;
+        color: white;
+        cursor: pointer;
+        width: 8%;
+        margin-top: 1%;
+        display: block;
+        position: absolute;
+        margin-left: -1%;
+    }
+}
+
